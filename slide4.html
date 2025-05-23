@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>육아크루 소개</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex; /* For centering the slide */
+            justify-content: center; /* For centering the slide */
+            align-items: center; /* For centering the slide */
+            min-height: 100vh; /* Ensure full viewport height for centering */
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Added for consistency */
+            padding: 40px; /* p-10 */
+        }
+        .stat-card {
+            border-radius: 12px;
+            background: linear-gradient(to bottom, #ffffff, #f9fafb);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+        .number-highlight {
+            font-size: 2.5rem; /* 40px */
+            font-weight: 700;
+            background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text; /* Standard property */
+            text-fill-color: transparent; /* Standard property */
+            display: inline-block;
+        }
+        .chart-container {
+            height: 240px;
+            width: 100%;
+        }
+        .service-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-radius: 12px;
+        }
+        .solution-area {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 6px solid #4F46E5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container mx-auto">
+        <h1 class="text-3xl font-bold mb-8 pb-3 border-b border-gray-200">
+            <i class="fas fa-baby text-blue-500 mr-3"></i>
+            육아크루 소개
+        </h1>
+        
+        <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-6">
+                <div class="service-card p-6 mb-6">
+                    <h2 class="text-xl font-bold mb-6">
+                        동네 육아 친구를 찾아주는 서비스
+                    </h2>
+                    <h3 class="text-lg font-bold mb-3">
+                        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                        주요 기능
+                    </h3>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-blue-400 mr-2"></i>
+                            <span> 지역기반 육아 친구 찾기</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-book text-blue-400 mr-2"></i>
+                            <span> 지역기반 육아 커뮤니티</span>
+                        </div>
+                    </div>
+
+
+                    <h3 class="text-lg font-bold mt-6 mb-3">
+                        <i class="fas fa-info-circle text-blue-500 mr-2"></i>
+                        제품팀 구성
+                    </h3>
+                    <div class="mt-4 space-y-2">
+                        <div class="flex items-center">
+                            <i class="fas fa-users text-blue-400 mr-2"></i>
+                            <span> 개발자 3명 기획자 1명</span>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="stat-card p-6">
+                    <h2 class="text-xl font-bold mb-4">
+                        <i class="fas fa-bullseye text-blue-500 mr-2"></i>
+                        제품팀의 목표
+                    </h2>
+                    <div class="flex items-center justify-center bg-blue-50 p-4 rounded-lg">
+                        <div class="text-center">
+                            <i class="fas fa-chart-line text-4xl text-blue-500 mb-2"></i>
+                            <h3 class="text-2xl font-bold text-blue-700">사용자 리텐션 개선</h3>
+                            <p class="text-gray-600 mt-2"> 지난달에 방문한 사용자가 이번달에도 방문하게 하기</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-area p-6 rounded-lg mt-6">
+                    <p class="text-xl text-gray-600 font-bold">
+                       데이터를 활용해서 리탠션을 개선해보자!
+                    </p>
+                </div>
+            </div>
+
+            
+        </div>
+        
+    </div>
+</body>
+</html>

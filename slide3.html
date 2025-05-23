@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제 상황</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script> 
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            display: flex; /* For centering the slide */
+            justify-content: center; /* For centering the slide */
+            align-items: center; /* For centering the slide */
+            min-height: 100vh; /* Ensure full viewport height for centering */
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 720px;
+            overflow: hidden;
+            position: relative;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Added for consistency */
+            padding: 48px; /* p-12 */
+        }
+        .problem-card {
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: linear-gradient(to bottom, #ffffff, #f9fafb);
+        }
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+        .circle-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #4F46E5 0%, #6366F1 100%);
+            color: white;
+            font-size: 24px;
+        }
+        .solution-area {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 6px solid #4F46E5;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container mx-auto">
+        <h1 class="text-3xl font-bold mb-8 pb-4 border-b border-gray-200">
+            <i class="fas fa-exclamation-circle text-red-500 mr-3"></i>
+            데이터 활용 생각만큼 쉽지 않다.
+        </h1>
+        
+        <div class="mb-6">
+            <div class="flex flex-col items-center mermaid">
+            graph LR
+                A[비즈니스 문제 정의] --> B[데이터 분석]
+                B --> C[데이터 수집 계획 작성]
+                C --> D[이벤트 수집 코드 구현 및 배포]
+                D --> E[사용자 데이터 수집]
+                E --> B
+
+                B --> F[실험 설계]
+                F --> G[실험 수행]
+                G --> H[실험 결과 분석]
+                H --> B
+                H --> I[제품 개선]
+                I --> J[제품 성장]
+                
+                style A fill:#e0f2fe,stroke:#4F46E5,stroke-width:2px
+                style B fill:#e0f2fe,stroke:#4F46E5,stroke-width:2px
+                style C fill:#e0f2fe,stroke:#4F46E5,stroke-width:2px
+                style D fill:#e0f2fe,stroke:#4F46E5,stroke-width:2px
+                style E fill:#e0f2fe,stroke:#4F46E5,stroke-width:2px
+            </div>
+        </div>
+        <div class="grid grid-cols-3 gap-6 mb-8">
+            <div class="problem-card p-6">
+                <div class="flex flex-col items-center mb-4">
+                    <div class="circle-icon mb-4">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-center"> 전문성 부족 </h3>
+                </div>
+                
+                <ul class="space-y-2 list-disc">
+                    <li> 전문 분석가 없다 </li>
+                    <li> PM, 디자이너, 마케터가 서브 업무로 해야한다 </li>
+                    <li> 잘 모르는데.. 실수하면 어쪄지? 자신이 없다 </li>
+                </ul>
+            </div>
+            
+            <div class="problem-card p-6">
+                <div class="flex flex-col items-center mb-4">
+                    <div class="circle-icon mb-6">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-center">리소스 부족</h3>
+                </div>
+                <ul class="space-y-2 list-disc">
+                    <li> 원래 하던일도 많은데 할일이 더 생긴다 </li>
+                    <li> 따라잡아야 할 일이 생각보다 많다. 부담된다 </li>
+                    <li> 어디서부터 시작해야할지 엄두가 나지 않는다 </li>
+                </ul>
+            </div>
+            
+            <div class="problem-card p-6">
+                <div class="flex flex-col items-center mb-4">
+                    <div class="circle-icon mb-4">
+                        <i class="fas fa-hourglass-half"></i>
+                    </div>
+                    <h3 class="font-bold text-xl text-center"> 느린 피드백</h3>
+                </div>
+                <ul class="space-y-2 list-disc">
+                    <li> 제대로된 분석을 하기까지 오래 걸린다 </li>
+                    <li> 데이터로 제품을 변경하기까지 오래 걸린다 </li>
+                    <li> 성장을 만들기까지 오래걸린다 </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="solution-area p-6 rounded-lg mt-6">
+            <p class="text-xl text-gray-600">
+                육아크루도 비슷한 어려움이 있었다. 어떻게 육아크루는 <span class="ㅊ">데이터를 잘 활용하게 되었을까? </span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
