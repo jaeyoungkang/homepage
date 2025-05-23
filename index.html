@@ -1,11 +1,93 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Young Company </title>
+    <title>강재영</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Arial', 'sans-serif'], // 기본 산세리프 폰트 지정
+                    },
+                    colors: {
+                        'custom-blue': '#007bff', // 이전 CSS의 파란색과 유사하게
+                        'custom-dark': '#343a40',
+                        'custom-light': '#f8f9fa',
+                        'custom-gray': '#6c757d',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-  매주 쉬지않고 반복하여 제품 개선 실험하고 배우기
+<body class="bg-custom-light text-custom-dark font-sans leading-relaxed">
+    <div class="grid grid-cols-12 gap-6">
+        <div class="col-span-6 min-h-screen flex flex-col justify-center items-center text-center pt-16 md:pt-20 px-4">
+            <img src="broccoli.png" alt="프로필 사진" class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover mb-6 shadow-sm">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-3">강재영 </h1>
+            <p class="text-lg md:text-xl text-custom-gray mb-2"> Jaeyoung Kang</p>
+            <p class="text-lg md:text-xl text-custom-gray mb-2"> 데이터를 활용하여 제품 그로스를 만듭니다</p>
+            <p class="text-lg md:text-xl mb-2"> 
+                <i class="fas fa-envelope text-custom-blue"></i>
+                <a href="mailto:jaeyoung2010@gmail.com" class="text-custom-blue hover:underline">jaeyoung2010@gmail.com</a> 
+            </p>
+            <p class="text-lg md:text-xl mb-2"> 
+                <i class="fab fa-linkedin fa-lg text-custom-blue"></i>
+                <a href="https://www.linkedin.com/in/jaeyoung-kang-33122496/" target="_blank" class="text-custom-blue hover:underline"> Jaeyoung Kang</a> 
+            </p>
+        </div>
+
+        <div class="col-span-6 py-16 md:py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-left space-y-10">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-custom-blue mb-3">Who I am</h3>
+                        <p class="text-custom-gray text-base md:text-lg">
+                            사용자 행동분석 도구(믹스패널, 엠플리튜드)를 도입하고 활용하는 것을 돕습니다.
+                        </p>
+                        <p class="text-custom-gray text-base md:text-lg">
+                            실험 및 분석으로 사용자를 이해하고 제품 성장의 기회를 찾는 것을 돕습니다.
+                        </p>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-semibold text-custom-blue mb-4">Experience</h3>
+                        <ul class="space-y-6">
+                            <li class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <h4 class="text-xl font-semibold text-gray-700"> 개인 컨설턴트</h4>
+                                <p class="text-sm text-gray-500 mb-1">2024-10 ~ </p>
+                                <p class="text-custom-gray text-base"> 데이터 활용한 제품 그로스 컨설팅 다수 </p>
+                            </li>
+
+                            <li class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <h4 class="text-xl font-semibold text-gray-700"> 육아크루 / 데이터 기반 그로스
+                                    <a href="./slide1.html" class="text-custom-blue hover:underline">
+                                        Case Study
+                                    </a>
+                                </h4>
+                                <p class="text-sm text-gray-500 mb-1">2024-10 ~ 2025-4 </p>
+                                <p class="text-custom-gray text-base"> 제품팀 데이터 활용 프로세스 구축</p>
+                                <p class="text-custom-gray text-base"> 사용자 리텐션 개선 </p>
+                            </li>
+                            <li class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <h4 class="text-xl font-semibold text-gray-700"> 마켓핏랩 솔루션즈 / CSM 리드</h4>
+                                <p class="text-sm text-gray-500 mb-1">2021-12 ~ 2024-9 </p>
+                                <p class="text-custom-gray text-base">국내 상당수의 기업 믹스패널 도입 및 활용 지원</p>
+                            </li>
+                            <li class="p-4 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300">
+                                <h4 class="text-xl font-semibold text-gray-700">기타</h4>
+                                <p class="text-sm text-gray-500 mb-1"> ~ 2021-11 </p>
+                                <p class="text-custom-gray text-base"> 개발자, PM, 데이터 분석가, 애자일 코치등 다양한 활동</p>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
