@@ -31,6 +31,10 @@
             /* Most other styles like shadow, padding, margin, bg-color are handled by Tailwind */
         }
 
+        .note-section {
+            width: 1280px; /* Specific width for consistent slide size */
+        }
+
         /* Slide 1: Accent border for emphasis (kept as it's a specific design element) */
         .slide1-accent-border {
             border-left: 8px solid #4F46E5; /* Indigo accent */
@@ -83,7 +87,7 @@
         </div>
         
     </nav>
-    <div class="presentation-section relative flex flex-col justify-center bg-white mb-8 p-16 overflow-hidden shadow-xl mt-8">
+    <div class="presentation-section relative flex flex-col justify-center bg-white mb-4 p-16 overflow-hidden shadow-xl mt-8">
         <div class="z-10 relative flex-grow flex flex-col justify-center">
             <h1 class="text-5xl font-black mb-4 leading-tight text-gray-800">
                 제품 데이터 분석으로<br>
@@ -98,8 +102,14 @@
             </h2>
         </div>
     </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        엠플리튜드 밋업에서 발표했던 자료입니다. 밋업은 시간의 제약이 있어서 많은 내용을 생략했는데요. 이 자료에서는 그때 못한 이야기도 같이하려고합니다. 
+        데이터 활용에 어려움을 겪는 분들에게 도움이 되길 바라고요. 궁금하신점은 링크드인이나 이메일을 통해 주시면 답변 드리겠습니다. 
+        질답들을 모아서 더 풍부한 콘텐츠로 만드려고 합니다. 부담없이 물어보세요~!
+    </div>
 
-    <div class="presentation-section relative bg-white mb-8 p-12 shadow-xl">
+    <div class="presentation-section relative bg-white mb-4 p-12 shadow-xl">
         <h1 class="text-3xl font-bold mb-8 border-b pb-4 text-gray-800">소개</h1>
         <div class="grid grid-cols-12 gap-6">
             <div class="col-span-5 bg-gray-50 p-8 rounded-2xl shadow-lg">
@@ -146,6 +156,18 @@
                     <p class="text-gray-600 mb-4">개발자, 애자일 코치, PM</p>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            저는 데이터기반 제품 그로스 만드는 것을 돕는 일을 해왔습니다. 현재는 개인 컨설턴트로 일하고 있습니다. 
+            프로덕트 그로스에 관해 도움이 필요하시면 링크드인으로 DM 주세요. 가벼운 조언에서 부터 실무적인 참여까지 모두 가능합니다.
+        </div>
+        <div>
+            어느날 저는 엠플리튜드 밋업에서 활용사례 발표가 가능한지 묻는 메일을 받았습니다. 제가 한국 엠플리튜드 사용량 최상위권이라고 하더군요!
+            흔쾌이 수락하면서 왜 저의 사용량이 많은걸까 그리고 다른 사람의 사용량은 왜 적은 걸까 생각을 했습니다.
+            이부분이 이발표의 주제이기도 합니다. 발표를 모두 들으시면 사용량이 그렇게 많을 수 있었는지 짐작하 실수 있을 것 입니다.
         </div>
     </div>
 
@@ -213,6 +235,30 @@
             </p>
         </div>
     </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            엠플리튜들 사용해보셔서 아시겠지만 데이터를 활용하기위해서 준비해야할 일들이 꽤 있습니다. 
+            위에 보이는 흐름도를 보시면 크게 데이터 분석 환경 준비 과정과 데이터 분석 이후 실험을 통한 제품 개선과정으로 나뉩니다.
+            이런 일련의 과정을 수행하는데 여러 어려움을 직면하게 되는데 저는 크게 3가지로 분류합니다.
+        </div>
+        <div class="mb-2">
+            일단 일련의 과정을 <strong> 잘 수행 </strong>하려면 알아야 할 것들이 있습니다. 전문성이 필요한거죠. 그러나 제품팀에 전문 데이터 분석가가 항상 있는 것은 아닙니다.
+            결국 기존 실무자들이 추가업무로 떠앉게됩니다. 엠플리튜드가 비전문가도 쉽게 분석을 하도록 돕는 도구이긴해도 배워야 할 것이 없는 것은 아닙니다.
+            아직 충분한 전문성을 갖추지 못했다고 느끼면 아무래도 데이터 분석 활동에 <strong>소극적 또는 수동적</strong>으로 되기 마련입니다.
+        </div>
+        <div class="mb-2">
+            업무 리소스도 충분치 않습니다. 다들 아시겠지만 제품팀은 제품 개발 일정이 이미 있습니다.
+            거기에 추가로 업무가 생기는거죠. 위 흐름도를 보면 알겠지만 추가로 해야 할 일도 생각보다 많습니다.
+            게다가 할 일들이 잘 모르는 일이라면 <strong>작은일도 크게</strong> 느껴집니다. 어디서부터 시작해야할지 엄두가 나지않고요.
+        </div>
+        <div class="mb-2">
+            마지막으로 데이터 활용 업무의 사이클이 너무 깁니다. 위 흐름도의 일련의 작업들을 제대로 소화하는데 길게는 몇달이 걸리기도 합니다. 환경설정만 해도 시간이 꽤 걸립니다. 
+            그리고 제품을 변경하는 실험을 하기전까지는 사실상 사용자에게 실질적인 영향을 미치지 못합니다. 즉 성과를 내기까지 시간이 오래 걸리는거죠.
+            이는 실무자의 동기에도 영향을 미칩니다. 사용자의 피드백을 빠르게 받는 것만큼 후속 액션에 대한 강한 동기부여도 없다는 것을 잊지마세요.
+            결국 데이터 활용의 주기가 길어지면 길어질수록 데이터를 더 안보게 되는 <strong>악순환</strong>이 생깁니다.
+        </div>
+    </div>
 
     <div class="presentation-section relative bg-white mb-8 p-12 shadow-xl"> 
         <h1 class="text-3xl font-bold mb-8 pb-3 border-b border-gray-200 text-gray-800">
@@ -251,6 +297,15 @@
             <p class="text-xl text-gray-700 font-semibold">
                <i class="fas fa-lightbulb text-yellow-400 mr-2"></i> 데이터를 활용해서 리텐션을 개선해보자!
             </p>
+        </div>
+    </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
         </div>
     </div>
 
@@ -309,6 +364,15 @@
             </div>
         </div>
     </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+    </div>
 
     <div class="presentation-section relative bg-white mb-8 p-12 shadow-xl">
         <h1 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200 text-gray-800">
@@ -328,6 +392,15 @@
             <img src="./retention.png"  class="w-auto h-auto">
        </div>
     </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+    </div>
 
     <div class="presentation-section relative bg-white mb-8 p-12 shadow-xl">
         <h1 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200 text-gray-800">
@@ -346,6 +419,15 @@
         <div class="flex items-center justify-center mt-8">
             <img src="./test.png"  class="w-auto h-auto">
        </div>
+    </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
+        </div>
     </div>
 
     <div class="presentation-section relative bg-white mb-8 p-12 shadow-xl">
@@ -367,6 +449,15 @@
         <div class="flex items-center justify-center mt-8">
             <img src="./result1.png"  class="w-auto h-auto">
        </div>
+    </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
+        </div>
     </div>
 
     <div class="presentation-section relative bg-white mb-8 p-12 shadow-xl">
@@ -397,6 +488,15 @@
             </div>
         </div>
     </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+    </div>
 
     <div class="presentation-section relative bg-white mb-8 p-12 shadow-xl">
         <h1 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200 text-gray-800">
@@ -407,6 +507,15 @@
             <div class="flex items-center justify-center mt-8">
                 <img src="./plan.png"  class="w-auto h-auto">
             </div>
+        </div>
+    </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
         </div>
     </div>
 
@@ -470,6 +579,15 @@
             </div>
         </div>
     </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+    </div>
 
     <div class="presentation-section relative bg-white mb-8 p-12 shadow-xl">
         <h1 class="text-3xl font-bold mb-6 pb-3 border-b border-gray-200 text-gray-800">
@@ -525,6 +643,15 @@
             </div>
         </div>
     </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+    </div>
 
 
     <div class="presentation-section relative bg-indigo-100 mb-8 p-12 overflow-visible shadow-xl">
@@ -566,6 +693,15 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="note-section slide1-accent-border mb-8 p-2">
+        <div class="font-bold"> Note </div>
+        <div class="mb-2">
+            작성중...
+        </div>
+        <div class="mb-2">
+            작성중...
         </div>
     </div>
 
