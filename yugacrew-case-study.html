@@ -24,17 +24,6 @@
             font-family: 'Noto Sans KR', sans-serif;
         }
 
-        /* Core container for each presentation section */
-        .presentation-section {
-            width: 1280px; /* Specific width for consistent slide size */
-            min-height: 720px; /* Minimum height for slide content */
-            /* Most other styles like shadow, padding, margin, bg-color are handled by Tailwind */
-        }
-
-        .note-section {
-            width: 1280px; /* Specific width for consistent slide size */
-        }
-
         /* Slide 1: Accent border for emphasis (kept as it's a specific design element) */
         .slide1-accent-border {
             border-left: 8px solid #4F46E5; /* Indigo accent */
@@ -71,7 +60,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-100 flex flex-col items-center min-h-screen">
+<body class="bg-gray-100 flex flex-col min-h-screen">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-578DXF2P"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -85,8 +74,10 @@
                 엠플리튜드 활용 사례 공유 자료 - 2025.05.22 엠플리튜드 밋업
             </div>
         </div>
-        
     </nav>
+
+    <main class="w-full max-w-[1280px] min-w-[1280px] flex flex-col flex-grow mx-auto p-16">
+
     <div class="presentation-section relative flex flex-col justify-center bg-white mb-4 p-16 overflow-hidden shadow-xl mt-8">
         <div class="z-10 relative flex-grow flex flex-col justify-center">
             <h1 class="text-5xl font-black mb-4 leading-tight text-gray-800">
@@ -102,7 +93,7 @@
             </h2>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         엠플리튜드 밋업에서 발표했던 자료입니다. 밋업은 시간의 제약이 있어서 많은 내용을 생략했는데요. 이 자료에서는 그때 못한 이야기도 같이하려고합니다. 
         데이터 활용에 어려움을 겪는 분들에게 도움이 되길 바라고요. 궁금하신점은 링크드인이나 이메일을 통해 주시면 답변 드리겠습니다. 
@@ -158,7 +149,7 @@
             </div>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             저는 데이터기반 제품 그로스 만드는 것을 돕는 일을 해왔습니다. 현재는 개인 컨설턴트로 일하고 있습니다. 
@@ -235,7 +226,7 @@
             </p>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             엠플리튜들 사용해보셔서 아시겠지만 데이터를 활용하기위해서 준비해야할 일들이 꽤 있습니다. 
@@ -302,7 +293,7 @@
             </p>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             육아크루는 지역기반 육아친구 매칭 앱 입니다. 가까운곳에 살고 있는 비슷한 연령대의 아이를 키우는 엄마들끼리 친구를 맺어주는 서비스이죠. 데이팅앱처럼 주기적으로 적합한 친구를 추천해줍니다.
@@ -372,7 +363,7 @@
             </div>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             전체 사용자 리텐션이 6% 포인트 개선되었고 신규 가입자 리텐션은 15% 포인트 개선되었습니다. 세부 세그먼트를 더 나누면 더 극적인 수치가 나오긴합니다. ㅎㅎ
@@ -417,7 +408,7 @@
             <img src="./retention.png"  class="w-auto h-auto">
        </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             최초 실험 사례를 구체적으로 공유드리겠습니다. 일단 초기에는 수집된 데이터가 적을 수 있습니다. 적더라도 데이터가 있다면 그것을 활용하여 실험의 단서를 찾습니다. 
@@ -459,7 +450,7 @@
             <img src="./test.png"  class="w-auto h-auto">
        </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             최초 분석을 하면서 향후 액션 플랜도 같이 논의했습니다. 커뮤니티글을 어떻게 적은 비용으로 올릴 수 있을지 아이디어를 냅니다. 그러면 실무자 차원에서 다양한 아이디어가 나오게 돕니다.
@@ -497,7 +488,7 @@
             <img src="./result1.png"  class="w-auto h-auto">
        </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             실험 자체가 단순하기 때문에 실험 결과 분석도 간단했습니다. 실험군이 대조군에 비해 해당 행동을 더 수행했는가? 그래서 재방문율이 올라갔는가?
@@ -563,7 +554,7 @@
             </div>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             이런 과정을 끊임없이 반복했습니다. 스케줄은 매주 실험계획으로 빡빡했고, 실험기획서와 결과분석 리포트는 쌓여갔습니다.
@@ -635,7 +626,7 @@
             </div>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
+    <div class="note-section slide1-accent-border mb-8 p-2 bg-white">
         <div class="font-bold"> Note </div>
         <div class="mb-2">
             이런 과정을 제품을 개선하는 가벼운 실험 자주 하기 방식 이라고 합니다. 
@@ -716,13 +707,6 @@
             </div>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
-        <div class="font-bold"> Note </div>
-        <div class="mb-2">
-            (작성중)
-        </div>
-    </div>
-
 
     <div class="presentation-section relative bg-indigo-100 mb-8 p-12 overflow-visible shadow-xl">
         <div class="z-10 relative w-full max-w-2xl mx-auto text-center p-8">
@@ -765,11 +749,6 @@
             </div>
         </div>
     </div>
-    <div class="note-section slide1-accent-border mb-8 p-2">
-        <div class="font-bold"> Note </div>
-        <div class="mb-2">
-            (작성중)
-        </div>
     </div>
 
     <script>
