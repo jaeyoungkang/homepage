@@ -39,3 +39,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# hugo
+/public/
+.hugo_build.lock
+
+# stones index (regeneratable)
+stones/embeddings.npy
+stones/index.json

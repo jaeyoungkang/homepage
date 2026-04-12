@@ -1,0 +1,41 @@
+[name]
+other = "강재영"
+
+[nameEn]
+other = "Jaeyoung Kang"
+
+[role]
+other = "AI Product Producer"
+
+[tagline]
+other = "AI 제품을 end-to-end로 만들고 성장시키는 영역을 탐색하고 개발합니다"
+
+[nowBuilding]
+other = "지금 만드는 것"
+
+[recentPosts]
+other = "최근 글"
+
+[allPosts]
+other = "모든 글"
+
+[about]
+other = "경력"
+
+[readMore]
+other = "더 읽기"
+
+[postedOn]
+other = "작성일"
+
+[backToHome]
+other = "홈으로"
+
+[career]
+other = "경력"
+
+[current]
+other = "현재"
+
+[previous]
+other = "이전"

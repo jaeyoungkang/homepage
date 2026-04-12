@@ -1,0 +1,41 @@
+[name]
+other = "Jaeyoung Kang"
+
+[nameEn]
+other = "Jaeyoung Kang"
+
+[role]
+other = "AI Product Producer"
+
+[tagline]
+other = "Exploring and developing the practice of building AI products end-to-end"
+
+[nowBuilding]
+other = "Now Building"
+
+[recentPosts]
+other = "Recent Posts"
+
+[allPosts]
+other = "All Posts"
+
+[about]
+other = "About"
+
+[readMore]
+other = "Read more"
+
+[postedOn]
+other = "Posted on"
+
+[backToHome]
+other = "Back to home"
+
+[career]
+other = "Career"
+
+[current]
+other = "Current"
+
+[previous]
+other = "Previous"

@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+<!-- Profile Section -->
+<section class="mb-12">
+  <div class="flex items-start gap-5 mb-6">
+    <img src="/broccoli.png" alt="강재영" class="w-16 h-16 rounded-full object-cover flex-shrink-0">
+    <div>
+      <h1 class="text-xl font-semibold mb-0 leading-tight">
+        {{ if eq .Lang "ko" }}강재영{{ else }}Jaeyoung Kang{{ end }}
+      </h1>
+      <p class="text-[0.9rem] text-[#555] mt-0.5">{{ i18n "role" }}</p>
+    </div>
+  </div>
+  <p class="text-[#555] mb-4">{{ i18n "tagline" }}</p>
+  <div class="flex gap-4 text-[0.85rem]">
+    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+    <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<!-- Now Building -->
+<section class="mb-12">
+  <p class="section-title">{{ i18n "nowBuilding" }}</p>
+  <ul class="space-y-3">
+    <li>
+      <span class="font-medium text-[#1a1a1a]">Corca</span>
+      <span class="text-[#555]"> — {{ if eq .Lang "ko" }}AI 제품 개발 (현재){{ else }}AI Product Development (Current){{ end }}</span>
+    </li>
+  </ul>
+</section>
+
+<!-- Recent Posts -->
+<section>
+  <p class="section-title">{{ i18n "recentPosts" }}</p>
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $posts = where $posts "Lang" .Lang }}
+  {{ range first 5 $posts }}
+  <a href="{{ .Permalink }}" class="flex justify-between items-baseline py-2 group">
+    <span class="text-[#1a1a1a] group-hover:text-[#555]">{{ .Title }}</span>
+    <span class="date ml-4 flex-shrink-0">{{ .Date.Format "2006.01.02" }}</span>
+  </a>
+  {{ end }}
+  {{ if gt (len $posts) 5 }}
+  <a href="/{{ .Lang }}/posts/" class="text-[0.85rem] text-[#999] hover:text-[#555] mt-2 inline-block">
+    {{ i18n "allPosts" }} &rarr;
+  </a>
+  {{ end }}
+</section>
+
+{{ end }}

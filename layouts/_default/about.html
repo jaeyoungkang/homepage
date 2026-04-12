@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+<h1 class="text-2xl font-semibold mb-10">{{ .Title }}</h1>
+
+<!-- Profile -->
+<section class="mb-12">
+  <div class="flex items-start gap-5 mb-4">
+    <div class="w-14 h-14 rounded-full bg-[#e5e5e5] flex-shrink-0"></div>
+    <div>
+      <h2 class="text-lg font-semibold leading-tight">
+        {{ if eq .Lang "ko" }}강재영{{ else }}Jaeyoung Kang{{ end }}
+      </h2>
+      <p class="text-[0.9rem] text-[#555]">{{ i18n "role" }}</p>
+      <p class="text-[0.85rem] text-[#555] mt-1">{{ i18n "tagline" }}</p>
+    </div>
+  </div>
+  <div class="flex gap-4 text-[0.85rem] ml-[4.75rem]">
+    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
+    <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</section>
+
+<!-- Career Timeline -->
+<section>
+  <p class="section-title">{{ i18n "career" }}</p>
+
+  <div class="space-y-8">
+    <!-- Current -->
+    <div class="flex gap-4">
+      <div class="w-24 flex-shrink-0 text-right">
+        <span class="date">{{ if eq .Lang "ko" }}현재{{ else }}Current{{ end }}</span>
+      </div>
+      <div>
+        <p class="font-medium text-[#1a1a1a]">Corca</p>
+        <p class="text-[0.9rem] text-[#555]">AI Product Producer</p>
+      </div>
+    </div>
+
+    <div class="flex gap-4">
+      <div class="w-24 flex-shrink-0 text-right">
+        <span class="date">2024–2025</span>
+      </div>
+      <div>
+        <p class="font-medium text-[#1a1a1a]">{{ if eq .Lang "ko" }}개인 컨설턴트{{ else }}Independent Consultant{{ end }}</p>
+        <p class="text-[0.9rem] text-[#555]">{{ if eq .Lang "ko" }}데이터 기반 그로스{{ else }}Data-driven Growth{{ end }}</p>
+      </div>
+    </div>
+
+    <div class="flex gap-4">
+      <div class="w-24 flex-shrink-0 text-right">
+        <span class="date">2021–2024</span>
+      </div>
+      <div>
+        <p class="font-medium text-[#1a1a1a]">{{ if eq .Lang "ko" }}마켓핏랩 솔루션즈{{ else }}MarketFitLab Solutions{{ end }}</p>
+        <p class="text-[0.9rem] text-[#555]">CSM {{ if eq .Lang "ko" }}리드{{ else }}Lead{{ end }}</p>
+      </div>
+    </div>
+
+    <div class="flex gap-4">
+      <div class="w-24 flex-shrink-0 text-right">
+        <span class="date">{{ if eq .Lang "ko" }}이전{{ else }}Earlier{{ end }}</span>
+      </div>
+      <div>
+        <p class="text-[0.9rem] text-[#555] leading-relaxed">
+          {{ if eq .Lang "ko" }}개발자, PM, 데이터 분석가, 애자일 코치{{ else }}Developer, PM, Data Analyst, Agile Coach{{ end }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,19 @@
+{{ define "main" }}
+
+<h1 class="text-2xl font-semibold mb-8">{{ .Title }}</h1>
+
+<div>
+  {{ range .Pages }}
+  <a href="{{ .Permalink }}" class="block py-4 border-b border-[#f0f0f0] group">
+    <div class="flex justify-between items-baseline">
+      <span class="text-[#1a1a1a] font-medium group-hover:text-[#555]">{{ .Title }}</span>
+      <span class="date ml-4 flex-shrink-0">{{ .Date.Format "2006.01.02" }}</span>
+    </div>
+    {{ with .Params.summary }}
+    <p class="text-[0.875rem] text-[#999] mt-1">{{ . }}</p>
+    {{ end }}
+  </a>
+  {{ end }}
+</div>
+
+{{ end }}

@@ -1,0 +1,29 @@
+{{ define "main" }}
+
+<article class="prose">
+  <header class="mb-8">
+    <h1>{{ .Title }}</h1>
+    <div class="flex items-center gap-3 text-[0.85rem]">
+      <span class="date">{{ .Date.Format "2006.01.02" }}</span>
+      {{ range .Params.tags }}
+        <a href="{{ `/tags/` | relLangURL }}{{ . | urlize }}/" class="text-[#999] hover:text-[#555]">#{{ . }}</a>
+      {{ end }}
+    </div>
+  </header>
+
+  <div>
+    {{ .Content }}
+  </div>
+</article>
+
+<div class="mt-12 pt-8 border-t border-[#f0f0f0]">
+  <div class="flex items-center gap-4">
+    <img src="/broccoli.png" alt="강재영" class="w-10 h-10 rounded-full object-cover flex-shrink-0">
+    <div class="text-[0.875rem]">
+      <p class="font-medium text-[#1a1a1a]">{{ if eq .Lang "ko" }}강재영{{ else }}Jaeyoung Kang{{ end }}</p>
+      <p class="text-[#999]">{{ i18n "role" }}</p>
+    </div>
+  </div>
+</div>
+
+{{ end }}

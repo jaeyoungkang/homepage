@@ -1,0 +1,23 @@
+<header class="flex items-center justify-between mb-12 md:mb-16">
+  <a href="/{{ .Lang }}/" class="text-[#1a1a1a] font-semibold text-lg hover:text-[#1a1a1a]">
+    {{ if eq .Lang "ko" }}강재영{{ else }}Jaeyoung{{ end }}
+  </a>
+  <nav class="flex items-center gap-6 text-[0.9rem]">
+    {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}" class="text-[#555] hover:text-[#1a1a1a]">{{ .Name }}</a>
+    {{ end }}
+    {{- $translations := .Translations -}}
+    {{- range $translations -}}
+      <a href="{{ .Permalink }}" class="text-[#999] hover:text-[#1a1a1a] text-xs font-medium">
+        {{ .Language.LanguageName }}
+      </a>
+    {{- end -}}
+    {{- if not $translations -}}
+      {{- if eq $.Lang "ko" -}}
+        <a href="/en/" class="text-[#999] hover:text-[#1a1a1a] text-xs font-medium">EN</a>
+      {{- else -}}
+        <a href="/ko/" class="text-[#999] hover:text-[#1a1a1a] text-xs font-medium">KO</a>
+      {{- end -}}
+    {{- end -}}
+  </nav>
+</header>

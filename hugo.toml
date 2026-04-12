@@ -1,0 +1,55 @@
+baseURL = 'https://youngcompany.kr/'
+title = '강재영'
+defaultContentLanguage = 'ko'
+defaultContentLanguageInSubdir = true
+
+[markup]
+  [markup.highlight]
+    style = 'github'
+    lineNos = false
+    noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[params]
+  author = '강재영'
+  email = 'j@youngcompany.kr'
+  linkedin = 'https://www.linkedin.com/in/jaeyoung-kang-33122496/'
+  github = 'https://github.com/jaeyoung2026'
+
+[languages]
+  [languages.ko]
+    languageName = 'KO'
+    weight = 1
+    title = '강재영'
+    contentDir = 'content/ko'
+    [languages.ko.params]
+      description = 'AI 제품을 처음부터 끝까지 만들고 성장시킵니다'
+    [[languages.ko.menus.main]]
+      name = 'Posts'
+      url = '/ko/posts/'
+      weight = 1
+    [[languages.ko.menus.main]]
+      name = 'About'
+      url = '/ko/about/'
+      weight = 2
+
+  [languages.en]
+    languageName = 'EN'
+    weight = 2
+    title = 'Jaeyoung Kang'
+    contentDir = 'content/en'
+    [languages.en.params]
+      description = 'Building and growing AI products end-to-end'
+    [[languages.en.menus.main]]
+      name = 'Posts'
+      url = '/en/posts/'
+      weight = 1
+    [[languages.en.menus.main]]
+      name = 'About'
+      url = '/en/about/'
+      weight = 2
+
+[taxonomies]
+  tag = 'tags'
