@@ -14,12 +14,14 @@
 | corca 프로젝트 | `~/corca/spec-scope/`, `flow-explorer/`, `agentic-base/` | 도구 개발 경험 |
 | 개인 프로젝트 | `~/clawhub/`, `~/mirror-mind-public/`, `~/jaeyoung-think/` | 공개 프로젝트 경험 |
 
-## 돌 수집
+## 돌 수집 — 내러티브 메모리 기반
 
-- **언제**: 작업 중 아무 때나 + 세션 종료 시
-- **어디에**: `stones/YYYY-MM-DD-키워드.md`
-- **형식**: frontmatter(date, source, tags, used_in) + 본문 1~5줄
-- **기준**: 구체적 관찰/숫자/일화/인용. 감상이 아니라 사실
+- **소스**: mirror-mind/memory/narratives/ (세션 + 주제)
+- **자동 생성**: close-session.py 실행 시 내러티브 메모리가 생성된다. 이것이 곧 돌이다
+- **단위**: 세션 내러티브의 event 1개 = 돌 1개, 주제의 thesis/question/changelog = 돌 1개
+- **인덱싱**: `python3 scripts/index-stones.py` (내러티브 → 임베딩)
+- **검색**: `python3 scripts/find-stones.py --query "키워드"`
+- **stones/ 폴더**: 인덱스(index.json, embeddings.npy)만 저장. 원본은 mirror-mind에 있다
 
 ## 소재 선정 기준
 
