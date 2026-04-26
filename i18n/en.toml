@@ -8,10 +8,19 @@ other = "Jaeyoung Kang"
 other = "AI Product Producer"
 
 [tagline]
-other = "Exploring and developing the practice of building AI products end-to-end"
+other = "Building and growing AI products end-to-end, and writing about what I learn along the way."
 
-[nowBuilding]
-other = "Now Building"
+[work]
+other = "Work"
+
+[writing]
+other = "Writing"
+
+[about]
+other = "About"
+
+[home]
+other = "Home"
 
 [recentPosts]
 other = "Recent Posts"
@@ -19,8 +28,11 @@ other = "Recent Posts"
 [allPosts]
 other = "All Posts"
 
-[about]
-other = "About"
+[viewAllWork]
+other = "All Work"
+
+[viewAllWriting]
+other = "All Writing"
 
 [readMore]
 other = "Read more"
@@ -31,11 +43,11 @@ other = "Posted on"
 [backToHome]
 other = "Back to home"
 
-[career]
-other = "Career"
+[themeEditorial]
+other = "Switch to Editorial theme"
 
-[current]
-other = "Current"
+[themeStudio]
+other = "Switch to Studio theme"
 
-[previous]
-other = "Previous"
+[contact]
+other = "Contact"

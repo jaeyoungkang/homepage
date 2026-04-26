@@ -1,5 +1,5 @@
-baseURL = 'https://jaeyoungkang.github.io/homepage/'
-title = '강재영'
+baseURL = 'https://youngcompany.kr/'
+title = 'youngcompany'
 defaultContentLanguage = 'ko'
 defaultContentLanguageInSubdir = true
 
@@ -22,34 +22,42 @@ defaultContentLanguageInSubdir = true
   [languages.ko]
     languageName = 'KO'
     weight = 1
-    title = '강재영'
+    title = 'youngcompany'
     contentDir = 'content/ko'
     [languages.ko.params]
-      description = 'AI 제품을 처음부터 끝까지 만들고 성장시킵니다'
+      description = 'AI 시대 제품 디자인과 AI 에이전트 엔지니어링을 연구합니다.'
     [[languages.ko.menus.main]]
-      name = 'Posts'
-      url = '/ko/posts/'
+      name = 'Work'
+      url = '/ko/#work'
       weight = 1
+    [[languages.ko.menus.main]]
+      name = 'Writing'
+      url = '/ko/posts/'
+      weight = 2
     [[languages.ko.menus.main]]
       name = 'About'
       url = '/ko/about/'
-      weight = 2
+      weight = 3
 
   [languages.en]
     languageName = 'EN'
     weight = 2
-    title = 'Jaeyoung Kang'
+    title = 'youngcompany'
     contentDir = 'content/en'
     [languages.en.params]
-      description = 'Building and growing AI products end-to-end'
+      description = 'Researching product design and agent engineering in the AI era.'
     [[languages.en.menus.main]]
-      name = 'Posts'
-      url = '/en/posts/'
+      name = 'Work'
+      url = '/en/#work'
       weight = 1
+    [[languages.en.menus.main]]
+      name = 'Writing'
+      url = '/en/posts/'
+      weight = 2
     [[languages.en.menus.main]]
       name = 'About'
       url = '/en/about/'
-      weight = 2
+      weight = 3
 
 [taxonomies]
   tag = 'tags'

@@ -1,50 +1,200 @@
 {{ define "main" }}
 
-<!-- Profile Section -->
-<section class="mb-12">
-  <div class="flex items-start gap-5 mb-6">
-    <img src="/broccoli.png" alt="강재영" class="w-16 h-16 rounded-full object-cover flex-shrink-0">
-    <div>
-      <h1 class="text-xl font-semibold mb-0 leading-tight">
-        {{ if eq .Lang "ko" }}강재영{{ else }}Jaeyoung Kang{{ end }}
-      </h1>
-      <p class="text-[0.9rem] text-[#555] mt-0.5">{{ i18n "role" }}</p>
+  {{/* ---------------- Hero ---------------- */}}
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <p class="eyebrow">
+        <span class="ed-only">youngcompany · Seoul</span>
+        <span class="st-only">youngcompany / 2026 / selected</span>
+      </p>
+      <div class="lockup">
+        <h1 id="hero-title">AI&nbsp;Product<br/><em>Producer.</em></h1>
+        <p class="sub">{{ i18n "tagline" }}</p>
+      </div>
+      <div class="meta">
+        <span class="index">№ 001 — youngcompany</span>
+        <span class="meta-row">{{ i18n "name" }} · Seoul, KR</span>
+        <span class="meta-row">Updated {{ now.Format "2006" }}</span>
+      </div>
     </div>
-  </div>
-  <p class="text-[#555] mb-4">{{ i18n "tagline" }}</p>
-  <div class="flex gap-4 text-[0.85rem]">
-    <a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a>
-    <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
-  </div>
-</section>
+  </section>
 
-<!-- Now Building -->
-<section class="mb-12">
-  <p class="section-title">{{ i18n "nowBuilding" }}</p>
-  <ul class="space-y-3">
-    <li>
-      <span class="font-medium text-[#1a1a1a]">Corca</span>
-      <span class="text-[#555]"> — {{ if eq .Lang "ko" }}AI 제품 개발 (현재){{ else }}AI Product Development (Current){{ end }}</span>
-    </li>
-  </ul>
-</section>
+  {{/* ---------------- Work ---------------- */}}
+  {{ $works := where .Site.RegularPages "Section" "work" }}
+  {{ $works = where $works "Lang" .Lang }}
+  {{ $works = sort $works "Weight" }}
+  {{ $count := len $works }}
 
-<!-- Recent Posts -->
-<section>
-  <p class="section-title">{{ i18n "recentPosts" }}</p>
+  <section id="work" aria-labelledby="work-title">
+    <div class="wrap">
+
+      {{/* ---- Editorial variant ---- */}}
+      <div data-variant="editorial">
+        <p class="eyebrow section-eyebrow">Work — {{ printf "%03d" $count }} entries</p>
+        <h2 class="section-title" id="work-title">{{ if eq .Lang "ko" }}진행 중인 <em>작품들.</em>{{ else }}Selected <em>work.</em>{{ end }}</h2>
+
+        <div class="work-list">
+          {{ range $i, $w := $works }}
+          <article class="work-item">
+            <div class="work-num">{{ printf "%02d" (add $i 1) }} / {{ printf "%02d" $count }}</div>
+            <div class="work-body">
+              <h3>{{ with $w.Params.externalUrl }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $w.Title }}</a>{{ else }}<a href="{{ $w.RelPermalink }}">{{ $w.Title }}</a>{{ end }}</h3>
+              <p>{{ $w.Params.blurb }}</p>
+            </div>
+            <div class="work-meta-ed">
+              <span class="stage {{ $w.Params.status }}">{{ if eq $w.Params.status "live" }}Live{{ else if eq $w.Params.status "concept" }}Concept{{ else }}{{ $w.Params.status }}{{ end }}</span>
+              <span class="org">{{ $w.Params.statusLabel }}</span>
+            </div>
+          </article>
+          {{ end }}
+        </div>
+      </div>
+
+      {{/* ---- Studio variant ---- */}}
+      <div data-variant="studio">
+        <div class="section-head">
+          <h2 class="section-title">Work</h2>
+          <span class="label">{{ printf "%03d" $count }} / Selected</span>
+        </div>
+
+        <div class="work-grid">
+          {{ range $i, $w := $works }}
+          <a class="card" href="{{ with $w.Params.externalUrl }}{{ . }}{{ else }}{{ $w.RelPermalink }}{{ end }}"{{ with $w.Params.externalUrl }} target="_blank" rel="noopener"{{ end }} aria-label="{{ $w.Title }}">
+            {{ partial "work-thumb.html" $w }}
+            <div class="meta">
+              <span class="stage-s {{ $w.Params.status }}"><span class="dot-s"></span>{{ $w.Params.statusLabel }}</span>
+              <h3>{{ $w.Title }}</h3>
+              <p>{{ $w.Params.blurb }}</p>
+            </div>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* ---------------- Writing ---------------- */}}
   {{ $posts := where .Site.RegularPages "Section" "posts" }}
   {{ $posts = where $posts "Lang" .Lang }}
-  {{ range first 5 $posts }}
-  <a href="{{ .Permalink }}" class="flex justify-between items-baseline py-2 group">
-    <span class="text-[#1a1a1a] group-hover:text-[#555]">{{ .Title }}</span>
-    <span class="date ml-4 flex-shrink-0">{{ .Date.Format "2006.01.02" }}</span>
-  </a>
-  {{ end }}
-  {{ if gt (len $posts) 5 }}
-  <a href="/{{ .Lang }}/posts/" class="text-[0.85rem] text-[#999] hover:text-[#555] mt-2 inline-block">
-    {{ i18n "allPosts" }} &rarr;
-  </a>
-  {{ end }}
-</section>
+  {{ $latest := index $posts 0 }}
+
+  <section id="writing" aria-labelledby="writing-title">
+    <div class="wrap">
+
+      <div data-variant="editorial">
+        <p class="eyebrow section-eyebrow">Writing — Latest</p>
+        <h2 class="section-title" id="writing-title">{{ if eq .Lang "ko" }}만드는 사람의 <em>기록.</em>{{ else }}Notes from <em>making.</em>{{ end }}</h2>
+
+        {{ with $latest }}
+        <article class="writing-card-ed">
+          <div class="date">{{ .Date.Format "2006 · 01 · 02" }}</div>
+          <div>
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p>{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}</p>
+            <a href="{{ .RelPermalink }}" class="more">{{ i18n "readMore" }} &nbsp;→</a>
+          </div>
+          <div class="kicker">
+            <span class="label">Essay</span>
+          </div>
+        </article>
+        {{ end }}
+
+        {{ if gt (len $posts) 1 }}
+        <p style="margin-top: 2rem;"><a href="{{ "/posts/" | relLangURL }}" class="more">{{ i18n "viewAllWriting" }} &nbsp;→</a></p>
+        {{ end }}
+      </div>
+
+      <div data-variant="studio">
+        <div class="section-head">
+          <h2 class="section-title">Writing</h2>
+          <span class="label">Notes from the studio</span>
+        </div>
+
+        <div class="writing-grid">
+          {{ with $latest }}
+          <a class="writing-card-st" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+            <span class="date">{{ .Date.Format "2006 — 01 — 02" }}</span>
+            <h3>{{ .Title }}</h3>
+            <p>{{ with .Params.summary }}{{ . }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}</p>
+          </a>
+          {{ end }}
+
+          <div class="writing-side" aria-hidden="true">
+            <div>
+              <div class="small">Vol.</div>
+              <div class="big">{{ printf "%02d" (len $posts) }}</div>
+            </div>
+            <div>
+              <div class="small">Essay</div>
+              <div class="small" style="color:var(--ink); margin-top:6px;">design · density</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  {{/* ---------------- About ---------------- */}}
+  {{ $about := .Site.GetPage (printf "/%s/about" .Lang) }}
+  {{ if not $about }}{{ $about = .Site.GetPage "/about" }}{{ end }}
+
+  <section id="about" aria-labelledby="about-title">
+    <div class="wrap">
+
+      {{/* Editorial variant */}}
+      <div data-variant="editorial">
+        <p class="eyebrow section-eyebrow">About</p>
+        <h2 class="section-title" id="about-title">{{ i18n "name" }}, <em>AI Product Producer.</em></h2>
+
+        <div class="about-grid">
+          <div class="about-body">
+            {{ with $about }}{{ .Content }}{{ end }}
+          </div>
+          <div class="about-contact-ed">
+            <dl>
+              <dt>Email</dt>
+              <dd><a href="mailto:{{ .Site.Data.site.contact.email }}">{{ .Site.Data.site.contact.email }}</a></dd>
+              <dt>GitHub</dt>
+              <dd><a href="{{ .Site.Data.site.contact.github.url }}" target="_blank" rel="noopener">{{ .Site.Data.site.contact.github.handle }}</a></dd>
+              <dt>LinkedIn</dt>
+              <dd><a href="{{ .Site.Data.site.contact.linkedin.url }}" target="_blank" rel="noopener">{{ .Site.Data.site.contact.linkedin.handle }}</a></dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      {{/* Studio variant */}}
+      <div data-variant="studio">
+        <div class="section-head">
+          <h2 class="section-title">About</h2>
+          <span class="label">{{ i18n "name" }} — Producer</span>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-body">
+            {{ with $about }}{{ .Content }}{{ end }}
+          </div>
+
+          <div class="about-contact-st">
+            <div class="contact-row">
+              <span class="k">Email</span>
+              <a href="mailto:{{ .Site.Data.site.contact.email }}">{{ .Site.Data.site.contact.email }}</a>
+            </div>
+            <div class="contact-row">
+              <span class="k">GitHub</span>
+              <a href="{{ .Site.Data.site.contact.github.url }}" target="_blank" rel="noopener">{{ .Site.Data.site.contact.github.handle }}</a>
+            </div>
+            <div class="contact-row">
+              <span class="k">LinkedIn</span>
+              <a href="{{ .Site.Data.site.contact.linkedin.url }}" target="_blank" rel="noopener">{{ .Site.Data.site.contact.linkedin.handle }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
 {{ end }}

@@ -1,3 +1,6 @@
-<footer class="mt-16 pt-8 border-t border-[#f0f0f0] text-[0.8rem] text-[#999]">
-  <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+<footer class="site">
+  <div class="wrap row">
+    <p>&copy; {{ now.Year }} youngcompany</p>
+    <p><a href="mailto:{{ .Site.Data.site.contact.email }}">{{ .Site.Data.site.contact.email }}</a></p>
+  </div>
 </footer>

@@ -1,23 +1,29 @@
-<header class="flex items-center justify-between mb-12 md:mb-16">
-  <a href="/{{ .Lang }}/" class="text-[#1a1a1a] font-semibold text-lg hover:text-[#1a1a1a]">
-    {{ if eq .Lang "ko" }}강재영{{ else }}Jaeyoung{{ end }}
-  </a>
-  <nav class="flex items-center gap-6 text-[0.9rem]">
-    {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}" class="text-[#555] hover:text-[#1a1a1a]">{{ .Name }}</a>
-    {{ end }}
-    {{- $translations := .Translations -}}
-    {{- range $translations -}}
-      <a href="{{ .Permalink }}" class="text-[#999] hover:text-[#1a1a1a] text-xs font-medium">
-        {{ .Language.LanguageName }}
-      </a>
-    {{- end -}}
-    {{- if not $translations -}}
-      {{- if eq $.Lang "ko" -}}
-        <a href="/en/" class="text-[#999] hover:text-[#1a1a1a] text-xs font-medium">EN</a>
-      {{- else -}}
-        <a href="/ko/" class="text-[#999] hover:text-[#1a1a1a] text-xs font-medium">KO</a>
-      {{- end -}}
-    {{- end -}}
-  </nav>
+<header class="site" id="home">
+  <div class="wrap row">
+    <a href="{{ "/" | relLangURL }}" class="wordmark" aria-label="youngcompany">
+      <span class="dot" aria-hidden="true"></span>youngcompany<span class="slash">/</span><em>{{ if eq .Lang "ko" }}강재영{{ else }}jaeyoung{{ end }}</em>
+    </a>
+    <div class="header-right">
+      <nav class="primary" aria-label="Primary">
+        {{ range .Site.Menus.main }}
+          <a href="{{ .URL }}">{{ .Name }}</a>
+        {{ end }}
+        {{- $translations := .Translations -}}
+        {{- range $translations -}}
+          <a href="{{ .Permalink }}" class="lang-switch">{{ .Language.LanguageName }}</a>
+        {{- end -}}
+        {{- if not $translations -}}
+          {{- if eq $.Lang "ko" -}}
+            <a href="/en/" class="lang-switch">EN</a>
+          {{- else -}}
+            <a href="/ko/" class="lang-switch">KO</a>
+          {{- end -}}
+        {{- end -}}
+      </nav>
+      <div class="theme-toggle" role="group" aria-label="theme">
+        <button type="button" data-theme-set="editorial" aria-label="{{ i18n "themeEditorial" }}" aria-pressed="false">◐</button>
+        <button type="button" data-theme-set="studio" aria-label="{{ i18n "themeStudio" }}" aria-pressed="false">◑</button>
+      </div>
+    </div>
+  </div>
 </header>

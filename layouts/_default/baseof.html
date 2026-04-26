@@ -1,90 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ .Lang }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
+  <title>{{ if .IsHome }}{{ .Site.Title }} — {{ i18n "name" }} / {{ i18n "role" }}{{ else }}{{ .Title }} — {{ .Site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="/css/syntax.css">
-  <style>
-    @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
-
-    body {
-      font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-      font-size: 17px;
-      line-height: 1.7;
-      color: #1a1a1a;
-      background: #fff;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-    }
-
-    a {
-      color: #555;
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    a:hover {
-      color: #1a1a1a;
-    }
-
-    .prose h1 { font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem; color: #1a1a1a; }
-    .prose h2 { font-size: 1.35rem; font-weight: 600; margin-top: 2.5rem; margin-bottom: 0.75rem; color: #1a1a1a; }
-    .prose h3 { font-size: 1.1rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.5rem; color: #1a1a1a; }
-    .prose p { margin-bottom: 20px; }
-    .prose ul, .prose ol { margin-bottom: 20px; padding-left: 1.5rem; }
-    .prose li { margin-bottom: 0.25rem; }
-    .prose img { max-width: 100%; border-radius: 8px; margin: 1.5rem 0; }
-    .prose blockquote {
-      border-left: 3px solid #e5e5e5;
-      padding-left: 1rem;
-      margin: 1.5rem 0;
-      color: #555;
-      font-style: italic;
-    }
-    .prose pre {
-      background: #f6f6f6;
-      border-radius: 8px;
-      padding: 1rem 1.25rem;
-      overflow-x: auto;
-      margin: 1.5rem 0;
-      font-size: 0.875rem;
-      line-height: 1.6;
-    }
-    .prose code {
-      font-family: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
-      font-size: 0.875em;
-    }
-    .prose p code {
-      background: #f6f6f6;
-      padding: 0.15rem 0.4rem;
-      border-radius: 4px;
-    }
-
-    .date {
-      color: #999;
-      font-size: 0.875rem;
-    }
-
-    .section-title {
-      font-size: 0.8rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: #999;
-      margin-bottom: 1rem;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      try {
+        var KEY = 'yc-theme';
+        var saved = localStorage.getItem(KEY);
+        var theme;
+        if (saved === 'editorial' || saved === 'studio') {
+          theme = saved;
+        } else {
+          theme = Math.random() < 0.5 ? 'editorial' : 'studio';
+          localStorage.setItem(KEY, theme);
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'editorial');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="{{ "/css/theme.css" | relURL }}">
 </head>
 <body>
-  <div class="max-w-[640px] mx-auto px-5 py-8 md:py-16">
-    {{ partial "header.html" . }}
-    <main>
-      {{ block "main" . }}{{ end }}
-    </main>
-    {{ partial "footer.html" . }}
-  </div>
+  {{ partial "header.html" . }}
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  <script src="{{ "/js/theme-toggle.js" | relURL }}"></script>
 </body>
 </html>
