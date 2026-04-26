@@ -903,3 +903,168 @@
       box-shadow: none !important;
     }
   }
+
+  /* ===========================================================
+     List / Single 페이지 — posts, work, about 공용
+     두 테마 모두 동일 마크업, CSS 변수로 톤만 따라간다.
+     =========================================================== */
+
+  .page-section {
+    padding: 96px 0 128px;
+    color: var(--ink, #111);
+    background: var(--paper, #fafaf7);
+    min-height: 60vh;
+  }
+
+  [data-theme="studio"] .page-section {
+    padding: 80px 0 120px;
+  }
+
+  .list-rows {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid var(--rule, rgba(0,0,0,0.12));
+  }
+
+  .list-rows .list-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid var(--rule, rgba(0,0,0,0.12));
+    color: var(--ink, #111);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+
+  .list-rows .list-row:hover {
+    opacity: 0.6;
+  }
+
+  .list-title {
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+
+  [data-theme="editorial"] .list-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+
+  [data-theme="studio"] .list-title {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 600;
+  }
+
+  .list-date {
+    font-size: 0.85rem;
+    opacity: 0.6;
+    flex-shrink: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* Single 본문 (post / work / about) */
+  .single header h1.section-title,
+  .single header .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .prose {
+    color: var(--ink, #111);
+    line-height: 1.75;
+  }
+
+  .prose p {
+    margin: 0 0 1.25rem;
+  }
+
+  .prose h2 {
+    margin: 2.5rem 0 1rem;
+    font-size: 1.5rem;
+  }
+
+  .prose h3 {
+    margin: 2rem 0 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  [data-theme="editorial"] .prose h2,
+  [data-theme="editorial"] .prose h3 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 500;
+  }
+
+  [data-theme="studio"] .prose h2,
+  [data-theme="studio"] .prose h3 {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-weight: 700;
+  }
+
+  .prose img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 2rem 0;
+  }
+
+  .prose blockquote {
+    margin: 1.5rem 0;
+    padding: 0 0 0 1.25rem;
+    border-left: 2px solid var(--rule, rgba(0,0,0,0.2));
+    opacity: 0.85;
+  }
+
+  .prose pre {
+    background: rgba(0,0,0,0.04);
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-size: 0.875rem;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+  }
+
+  [data-theme="studio"] .prose pre {
+    background: rgba(0,0,0,0.06);
+    border-radius: 0;
+  }
+
+  .prose code {
+    font-family: 'SF Mono', 'JetBrains Mono', 'Fira Code', monospace;
+    font-size: 0.9em;
+  }
+
+  .prose p code,
+  .prose li code {
+    background: rgba(0,0,0,0.06);
+    padding: 0.1rem 0.35rem;
+    border-radius: 3px;
+  }
+
+  .prose ul, .prose ol {
+    margin: 0 0 1.25rem;
+    padding-left: 1.5rem;
+  }
+
+  .prose li {
+    margin: 0.25rem 0;
+  }
+
+  .prose a {
+    color: var(--accent, var(--ink));
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  .prose a:hover {
+    opacity: 0.7;
+  }
+
+  /* 모바일 */
+  @media (max-width: 720px) {
+    .page-section { padding: 64px 0 96px; }
+    .list-rows .list-row { flex-direction: column; gap: 0.4rem; align-items: flex-start; }
+  }
