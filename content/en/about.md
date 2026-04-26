@@ -3,6 +3,6 @@ title: "About"
 translationKey: "about"
 ---
 
-강재영. AI Product Producer로 일하며 lighthouse, cabinet-meeting-brief, english sense training 등을 만들고 있습니다.
+Jaeyoung Kang. I work as an AI Product Producer, building products like lighthouse, cabinet-meeting-brief, and english sense training.
 
-AI 시대 제품 디자인과 AI 에이전트 엔지니어링을 연구합니다. youngcompany에서 작품과 글을 운영합니다.
+I research product design and AI agent engineering in the era of AI. youngcompany is where I keep work and writing.
