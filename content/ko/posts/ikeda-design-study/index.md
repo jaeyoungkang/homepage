@@ -24,13 +24,13 @@ https://isnbh0.github.io/my-sandbox/ikeda-showcase/  는 한 스터디 멤버가
 
 제미나이, 클로드, 지피티로 이케다 료지 리서치 시키고 그 내용을 바탕으로 그가 우리 제품을 디자인하면 어떤 모습일지 데모 페이지를 만들었다. (첨부 이미지 참고)
 
-![image01](Screenshot%202026-04-26%20at%2012.05.52%20PM.png)
-![image02](Screenshot%202026-04-24%20at%2011.22.43%20AM.png)
-![image03](Screenshot%202026-04-26%20at%2012.51.24%20PM.png)
+![image01](image01.png)
+![image02](image02.png)
+![image03](image03.png)
 
 그것중 맘에 드는 걸 스킬로 만들어서 실제 프로젝트에서 구현.(첨부 이미지)
 
-![image04](Screenshot%202026-04-26%20at%2011.40.51%20AM.png)
+![image04](image04.png)
 
 실제로 적용하는 과정에서 개성이 많이 없어지긴 했지만 기존것 보다는 훨씬 개성있는 모습이다. 기존 디자인이 얼마나 무색 무취였는지 알게되었다.
 
