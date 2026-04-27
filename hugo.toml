@@ -17,6 +17,8 @@ defaultContentLanguageInSubdir = true
   email = 'j@youngcompany.kr'
   linkedin = 'https://www.linkedin.com/in/jaeyoung-kang-33122496/'
   github = 'https://github.com/jaeyoung2026'
+  posthogToken = 'phc_mIq3DS0ZxckudJIDBruBpZp9RVqIN9KqHwEfgavoXtr'
+  posthogHost = 'https://us.i.posthog.com'
 
 [languages]
   [languages.ko]
