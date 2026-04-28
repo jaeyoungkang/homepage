@@ -1052,6 +1052,37 @@
     margin: 0.25rem 0;
   }
 
+  .prose table {
+    width: min(920px, calc(100vw - 40px));
+    margin: 1.5rem 0 2rem 50%;
+    transform: translateX(-50%);
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    background: var(--paper, #fafaf7);
+    border: 1px solid var(--rule, #111);
+  }
+
+  .prose th,
+  .prose td {
+    border: 1px solid var(--rule, #111);
+    padding: 0.75rem 0.85rem;
+    vertical-align: top;
+  }
+
+  .prose th {
+    text-align: left;
+    background: var(--ink, #111);
+    color: var(--paper, #fafaf7);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+  }
+
+  [data-theme="studio"] .prose table {
+    border-width: 2px;
+    box-shadow: 8px 8px 0 0 var(--ink);
+  }
+
   .prose a {
     color: var(--accent, var(--ink));
     text-decoration: underline;
@@ -1394,5 +1425,12 @@
     .intent-matrix {
       width: 100%;
       grid-template-columns: minmax(140px, 1.4fr) repeat(4, minmax(88px, 1fr));
+    }
+    .prose table {
+      display: block;
+      width: 100%;
+      margin-left: 0;
+      transform: none;
+      overflow-x: auto;
     }
   }
