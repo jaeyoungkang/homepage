@@ -31,14 +31,14 @@
       {{/* ---- Editorial variant ---- */}}
       <div data-variant="editorial">
         <p class="eyebrow section-eyebrow">Work — {{ printf "%03d" $count }} entries</p>
-        <h2 class="section-title" id="work-title">{{ if eq .Lang "ko" }}진행 중인 <em>작품들.</em>{{ else }}Selected <em>work.</em>{{ end }}</h2>
+        <h2 class="section-title" id="work-title">{{ if eq .Lang "ko" }}진행 중인 <em>작업물들.</em>{{ else }}Selected <em>work.</em>{{ end }}</h2>
 
         <div class="work-list">
           {{ range $i, $w := $works }}
           <article class="work-item">
             <div class="work-num">{{ printf "%02d" (add $i 1) }} / {{ printf "%02d" $count }}</div>
             <div class="work-body">
-              <h3>{{ with $w.Params.externalUrl }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $w.Title }}</a>{{ else }}<a href="{{ $w.RelPermalink }}">{{ $w.Title }}</a>{{ end }}</h3>
+              <h3><a href="{{ $w.RelPermalink }}">{{ $w.Title }}</a></h3>
               <p>{{ $w.Params.blurb }}</p>
             </div>
             <div class="work-meta-ed">
@@ -59,7 +59,7 @@
 
         <div class="work-grid">
           {{ range $i, $w := $works }}
-          <a class="card" href="{{ with $w.Params.externalUrl }}{{ . }}{{ else }}{{ $w.RelPermalink }}{{ end }}"{{ with $w.Params.externalUrl }} target="_blank" rel="noopener"{{ end }} aria-label="{{ $w.Title }}">
+          <a class="card" href="{{ $w.RelPermalink }}" aria-label="{{ $w.Title }}">
             {{ partial "work-thumb.html" $w }}
             <div class="meta">
               <span class="stage-s {{ $w.Params.status }}"><span class="dot-s"></span>{{ $w.Params.statusLabel }}</span>
