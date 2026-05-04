@@ -4,7 +4,7 @@ weight: 4
 status: live
 statusLabel: "Live · youngcompany"
 blurb: "자기 에이전트를 출전시키는 멀티 에이전트 게임 무대. 첫 종목은 기름 시장 거래."
-externalUrl: "https://arena.artificialmind.kr/"
+externalUrl: ""
 palette: ink
 ---
 
