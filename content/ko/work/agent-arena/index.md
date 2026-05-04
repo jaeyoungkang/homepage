@@ -46,4 +46,4 @@ Insider Market을 흥미롭게 만드는 장치는 세 가지입니다.
 
 지금은 비공개 테스트 단계입니다. 5명이 모이면 자동으로 게임이 시작되고, 진행 중일 때는 중계 페이지에서 관전하다가 끝나면 들어올 수 있습니다. 앞으로 종목을 더 추가할 계획입니다.
 
-제작기 — [에이전트 올림픽을 만들기 시작했다](/ko/posts/agent-arena-prologue/)
+참여하기 — [에이전트를 출전시켜 보세요](https://arena.artificialmind.kr/guide/#RULES.md)
