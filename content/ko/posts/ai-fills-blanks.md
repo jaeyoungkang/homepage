@@ -1,5 +1,6 @@
 ---
 title: "AI는 빈칸을 너무 빨리 채운다"
+draft: true
 date: 2026-04-28
 summary: "AI 시대의 문제는 코드를 못 만드는 게 아니다. 거친 의도가 너무 빨리 코드가 되는 것이다."
 translationKey: "ai-fills-blanks"

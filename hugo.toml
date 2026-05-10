@@ -33,13 +33,17 @@ defaultContentLanguageInSubdir = true
       url = '/ko/#work'
       weight = 1
     [[languages.ko.menus.main]]
+      name = 'How I work'
+      url = '/ko/how-i-work/'
+      weight = 2
+    [[languages.ko.menus.main]]
       name = 'Writing'
       url = '/ko/posts/'
-      weight = 2
+      weight = 3
     [[languages.ko.menus.main]]
       name = 'About'
       url = '/ko/about/'
-      weight = 3
+      weight = 4
 
   [languages.en]
     languageName = 'EN'
@@ -53,13 +57,17 @@ defaultContentLanguageInSubdir = true
       url = '/en/#work'
       weight = 1
     [[languages.en.menus.main]]
+      name = 'How I work'
+      url = '/en/how-i-work/'
+      weight = 2
+    [[languages.en.menus.main]]
       name = 'Writing'
       url = '/en/posts/'
-      weight = 2
+      weight = 3
     [[languages.en.menus.main]]
       name = 'About'
       url = '/en/about/'
-      weight = 3
+      weight = 4
 
 [taxonomies]
   tag = 'tags'

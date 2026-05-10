@@ -1,5 +1,6 @@
 ---
 title: "거친 의도가 코드가 될 때"
+draft: true
 date: 2026-04-28
 summary: "AI가 빠르게 구현하는 시대에 제작자의 의도를 코드 레벨까지 전파하고 검증하는 방법."
 translationKey: "intent-to-code-propagation"

@@ -1,5 +1,6 @@
 ---
 title: "AI 제품을 만드는 영역을 탐색한다는 것"
+draft: true
 date: 2026-04-10
 summary: "아직 정답이 없는 영역이다. 그래서 직접 만들어보면서 배운다."
 translationKey: "ai-product-maker"

@@ -1,5 +1,6 @@
 ---
 title: "AI에게 무엇을 못 하게 했는가"
+draft: true
 date: 2026-04-28
 summary: "AI 제품 운영의 핵심은 AI에게 무엇을 시켰는가가 아니다. 선언·전파·판정·차단 권한을 누가 갖는가의 분리에 가깝다."
 translationKey: "authority-split"

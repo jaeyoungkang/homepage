@@ -1,5 +1,6 @@
 ---
 title: "이케다 료지가 우리 제품을 디자인한다면"
+draft: true
 date: 2026-04-26
 summary: "AI 제품 디자인 스터디 첫 주 — 예술가의 관점을 제품에 빌려보는 시도와 다른 멤버들의 접근에서 배운 것."
 translationKey: "ikeda-design-study"

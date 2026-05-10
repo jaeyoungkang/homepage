@@ -1,5 +1,6 @@
 ---
 title: "신뢰도는 모델이 아니라 스택에서 온다"
+draft: true
 date: 2026-04-28
 summary: "AI 제품의 신뢰도는 모델 한 줄에서 나오지 않는다. 의도를 잃지 않게 만드는 일곱 개의 기계적 장치가 맞물려 만들어진다."
 translationKey: "trust-from-stack"

@@ -1,5 +1,6 @@
 ---
 title: "처음엔 SpecDown만 있었다"
+draft: true
 date: 2026-04-28
 summary: "라이트하우스의 정렬 시스템은 한 번에 만들어지지 않았다. SpecDown에서 출발해 User Story와 AOP, 검증 강화로 확장된 진화의 서사."
 translationKey: "from-specdown"

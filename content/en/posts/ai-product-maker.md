@@ -1,5 +1,6 @@
 ---
 title: "Exploring What It Means to Build AI Products"
+draft: true
 date: 2026-04-10
 summary: "There's no playbook yet. So I build things and learn as I go."
 translationKey: "ai-product-maker"
