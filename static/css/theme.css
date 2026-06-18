@@ -1760,6 +1760,226 @@
     }
   }
 
+  /* ── Feature-retirement diagrams ── */
+  .intent-visual code {
+    font-size: 0.82em;
+    background: rgba(0, 0, 0, 0.14);
+    padding: 0.05em 0.32em;
+    border-radius: 2px;
+    word-break: break-all;
+  }
+
+  /* 1. 생애주기 8단계 — intent-step 재사용, 8칸 그리드 */
+  .feat-chain {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(104px, 1fr));
+    overflow-x: auto;
+  }
+
+  /* 2. PDF 계약 — 약속 3개가 표면들로 묶임 */
+  .feat-fan {
+    display: flex;
+    flex-direction: column;
+  }
+  .feat-fan .fan-promises {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .feat-fan .fan-promises .intent-label {
+    grid-column: 1 / -1;
+    padding: 0.85rem 1rem 0.2rem;
+  }
+  .feat-fan .fan-promises strong {
+    padding: 1rem;
+    min-height: 92px;
+    background: #1f2bff;
+    color: #f4f1ea;
+    border-right: 1px solid var(--rule, #111);
+  }
+  .feat-fan .fan-promises strong:last-child {
+    border-right: 0;
+  }
+  .feat-fan .fan-arrow {
+    padding: 0.5rem;
+    text-align: center;
+    background: #0c0c0d;
+    color: #f4f1ea;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+  }
+  .feat-fan .fan-targets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .feat-fan .fan-targets span {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding: 0.8rem 1rem;
+    font-size: 0.78rem;
+    text-transform: none;
+    background: rgba(0, 0, 0, 0.03);
+    border-right: 1px solid var(--rule, #111);
+    border-top: 1px solid var(--rule, #111);
+  }
+
+  /* 3. & 전·후 흐름 — 좌우 2열 */
+  .feat-ba {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .feat-ba .ba-col {
+    padding: 1.25rem;
+    border-right: 1px solid var(--rule, #111);
+  }
+  .feat-ba .ba-col:last-child {
+    border-right: 0;
+  }
+  .feat-ba .ba-col.after {
+    background: rgba(0, 0, 0, 0.045);
+  }
+  .feat-ba .ba-col ol {
+    margin: 0.85rem 0 0;
+    padding-left: 1.15rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .feat-ba .ba-col li {
+    font-size: 0.86rem;
+    line-height: 1.4;
+  }
+
+  /* 4. 검증장치 분담 — 도구 | 질문 */
+  .feat-pairs {
+    display: flex;
+    flex-direction: column;
+  }
+  .feat-pairs .intent-label {
+    padding: 0.85rem 1.1rem;
+    background: #0c0c0d;
+    color: #f4f1ea;
+  }
+  .feat-pairs .pair {
+    display: grid;
+    grid-template-columns: minmax(168px, 0.9fr) minmax(0, 1.6fr);
+    border-top: 1px solid var(--rule, #111);
+  }
+  .feat-pairs .pair strong {
+    display: flex;
+    align-items: center;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.84rem;
+    background: rgba(0, 0, 0, 0.04);
+    border-right: 1px solid var(--rule, #111);
+  }
+  .feat-pairs .pair em {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0.9rem 1.1rem;
+    font-size: 0.86rem;
+    line-height: 1.45;
+    font-style: normal;
+    text-transform: none;
+    opacity: 1;
+  }
+
+  /* 5. 남은 불일치 — 정본 ≠ 실제 */
+  .feat-clash {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: stretch;
+  }
+  .feat-clash .clash-side {
+    padding: 1.25rem;
+  }
+  .feat-clash .clash-side.ok {
+    background: #06351c;
+    color: #f4f1ea;
+  }
+  .feat-clash .clash-side.warn {
+    background: #ff5b1f;
+    color: #fff8ef;
+  }
+  .feat-clash .clash-side .intent-label {
+    color: inherit;
+    opacity: 0.82;
+  }
+  .feat-clash .clash-side strong {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+  }
+  .feat-clash .clash-vs {
+    display: grid;
+    place-items: center;
+    padding: 0 1rem;
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: #0c0c0d;
+    color: #f4f1ea;
+  }
+  .feat-clash .clash-note {
+    grid-column: 1 / -1;
+    padding: 0.85rem 1.1rem;
+    border-top: 1px solid var(--rule, #111);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  @media (max-width: 720px) {
+    .feat-chain {
+      grid-template-columns: 1fr;
+      overflow-x: visible;
+    }
+    .feat-chain .intent-step {
+      min-height: auto;
+      border-right: 0;
+      border-bottom: 1px solid var(--rule, #111);
+    }
+    .feat-chain .intent-step:last-child {
+      border-bottom: 0;
+    }
+    .feat-fan .fan-promises {
+      grid-template-columns: 1fr;
+    }
+    .feat-fan .fan-promises strong {
+      border-right: 0;
+      border-bottom: 1px solid var(--rule, #111);
+    }
+    .feat-fan .fan-targets {
+      grid-template-columns: 1fr 1fr;
+    }
+    .feat-ba {
+      grid-template-columns: 1fr;
+    }
+    .feat-ba .ba-col {
+      border-right: 0;
+      border-bottom: 1px solid var(--rule, #111);
+    }
+    .feat-ba .ba-col:last-child {
+      border-bottom: 0;
+    }
+    .feat-pairs .pair {
+      grid-template-columns: 1fr;
+    }
+    .feat-pairs .pair strong {
+      border-right: 0;
+      border-bottom: 1px solid var(--rule, #111);
+    }
+    .feat-clash {
+      grid-template-columns: 1fr;
+    }
+    .feat-clash .clash-vs {
+      padding: 0.5rem;
+    }
+  }
+
   /* ── see-more link under intent visuals ── */
   .prose .see-more {
     margin: -1rem 0 2rem;
