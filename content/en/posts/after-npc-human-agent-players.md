@@ -13,7 +13,7 @@ The important question is not whether an agent can talk like a person. It is whe
 
 ## System 1 and System 2
 
-In his [Nobel Prize lecture, “Maps of Bounded Rationality”](https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/), and later in _Thinking, Fast and Slow_, Daniel Kahneman described human thought in terms of a fast, automatic System 1 and a slower, deliberative System 2. I believe this distinction can be turned into an architecture for player agents.
+In [_Thinking, Fast and Slow_](https://us.macmillan.com/books/9780374275631/thinkingfastandslow/), Daniel Kahneman described human thought in terms of a fast, automatic System 1 and a slower, deliberative System 2. I believe this distinction can be turned into an architecture for player agents.
 
 [TypeSafe AI's Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev) returns probabilities and confidence over predefined choices instead of generating prose. It could serve as a System 1 layer for judgments such as whether something is threatening, whom to trust, whether to speak, or whether to continue a plan. An LLM can take the System 2 role: setting longer-term goals, comparing alternatives, negotiating, and reflecting on failure.
 
@@ -48,6 +48,4 @@ This is still a product hypothesis, not an implementation result. Jev is newly r
 
 ## References
 
-- Daniel Kahneman, [“Maps of Bounded Rationality: Psychology for Behavioral Economics”](https://doi.org/10.1257/000282803322655392), _American Economic Review_ 93(5), 2003, 1449–1475.
-- Daniel Kahneman, [Prize Lecture: “Maps of Bounded Rationality”](https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/), NobelPrize.org, 2002.
 - Daniel Kahneman, [_Thinking, Fast and Slow_](https://us.macmillan.com/books/9780374275631/thinkingfastandslow/), Farrar, Straus and Giroux, 2011.
