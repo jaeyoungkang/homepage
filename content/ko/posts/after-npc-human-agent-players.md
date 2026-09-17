@@ -13,7 +13,7 @@ draft: false
 
 ## 시스템 1과 시스템 2
 
-대니얼 카너먼은 인간의 사고를 빠르고 자동적인 시스템 1과 느리고 숙고하는 시스템 2로 설명했다. 이 구분을 게임의 플레이어 에이전트에 옮길 수 있다고 본다.
+대니얼 카너먼은 [노벨상 강연 「Maps of Bounded Rationality」](https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/)과 이후의 저서 『Thinking, Fast and Slow』에서 인간의 사고를 빠르고 자동적인 시스템 1과 느리고 숙고하는 시스템 2로 설명했다. 이 구분을 게임의 플레이어 에이전트에 옮길 수 있다고 본다.
 
 [TypeSafe AI의 Jev](https://typesafe.ai/blog/introducing-system-one-models-and-jev)는 문장을 만드는 대신 미리 정한 선택지의 확률과 신뢰도를 반환한다. 위협을 느끼는가, 누구를 믿는가, 지금 말할 것인가, 계획을 계속할 것인가 같은 판단을 빠르게 내리는 시스템 1의 후보가 될 수 있다. LLM은 장기 목표를 세우고, 여러 선택을 비교하고, 협상하고, 실패를 되돌아보는 시스템 2를 맡는다.
 
@@ -46,3 +46,8 @@ NPC는 대개 인간 플레이어를 위해 배치된 콘텐츠다. 정해진 �
 
 이것은 아직 구현 결과가 아니라 제품 가설이다. Jev도 막 공개된 초기 모델이며 게임에서의 효과는 검증되지 않았다. 첫 실험은 전투 성능보다 신뢰, 협력, 배신이 드러나는 작은 게임이어야 한다. 그래야 시스템 1과 시스템 2의 결합이 단지 빠른 AI가 아니라, 함께 플레이할 가치가 있는 주체를 만드는지 볼 수 있다.
 
+## 참고 자료
+
+- Daniel Kahneman, [“Maps of Bounded Rationality: Psychology for Behavioral Economics”](https://doi.org/10.1257/000282803322655392), _American Economic Review_ 93(5), 2003, 1449–1475.
+- Daniel Kahneman, [Prize Lecture: “Maps of Bounded Rationality”](https://www.nobelprize.org/prizes/economic-sciences/2002/kahneman/lecture/), NobelPrize.org, 2002.
+- Daniel Kahneman, [_Thinking, Fast and Slow_](https://us.macmillan.com/books/9780374275631/thinkingfastandslow/), Farrar, Straus and Giroux, 2011.
