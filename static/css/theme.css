@@ -3279,3 +3279,83 @@
       border-bottom: 0;
     }
   }
+
+  /* ── Game-completeness dialogue ── */
+  .gq-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .gq-pair figure {
+    margin: 0;
+    border-right: 1px solid var(--rule, #111);
+  }
+  .gq-pair figure:last-child {
+    border-right: 0;
+  }
+  .prose .gq-pair img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+  }
+  .gq-pair figcaption {
+    padding: 0.85rem 1rem;
+    border-top: 1px solid var(--rule, #111);
+  }
+  .gq-pair figcaption em {
+    margin-top: 0.35rem;
+  }
+  .gq-row {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .gq-row .intent-step strong {
+    margin: 1rem 0 0;
+  }
+  .prose a[href*="#g-"] {
+    color: inherit;
+    text-decoration: underline dotted;
+    text-decoration-color: var(--accent, #b4351c);
+    text-underline-offset: 0.2em;
+  }
+  .gq-glossary {
+    margin-top: 3.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule, #111);
+  }
+  .gq-glossary dl {
+    margin: 0 0 1.5rem;
+  }
+  .gq-glossary dt {
+    margin-top: 0.9rem;
+    font-weight: 700;
+    scroll-margin-top: 90px;
+  }
+  .gq-glossary dt:target {
+    color: var(--accent, #b4351c);
+  }
+  .gq-glossary dd {
+    margin: 0.2rem 0 0;
+    line-height: 1.6;
+  }
+  .gq-dialogue p strong:first-child {
+    display: inline-block;
+    min-width: 4.5em;
+    color: var(--accent, #b4351c);
+  }
+  @media (max-width: 720px) {
+    .gq-pair,
+    .gq-row {
+      grid-template-columns: 1fr;
+    }
+    .gq-pair figure {
+      border-right: 0;
+      border-bottom: 1px solid var(--rule, #111);
+    }
+    .gq-pair figure:last-child {
+      border-bottom: 0;
+    }
+  }
