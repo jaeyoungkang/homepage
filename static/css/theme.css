@@ -3308,6 +3308,23 @@
   .gq-pair figcaption em {
     margin-top: 0.35rem;
   }
+  .gq-wide figure {
+    margin: 0;
+  }
+  .prose .gq-wide img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+  }
+  .gq-wide figcaption {
+    padding: 0.85rem 1rem;
+    border-top: 1px solid var(--rule, #111);
+  }
+  .gq-wide figcaption em {
+    margin-top: 0.35rem;
+  }
   .gq-row {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
